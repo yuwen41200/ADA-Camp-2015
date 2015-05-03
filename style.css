@@ -1,134 +1,139 @@
-/*******************************
-            Global
-*******************************/
-
 html {
-  font-size: 14px;
+	font-size: 14px;
 }
-
-
-/*******************************
-            Global
-*******************************/
 
 #home .menu .right.menu > .mobile.item {
-  display: none;
+	display: none;
 }
-
-/*--------------
-    Masthead
----------------*/
 
 #home .masthead {
-  background-image: url(images/bg.jpg);
-  margin: 0em;
-  padding: 5rem 0rem;
-}
-#home .masthead .column {
-  position: relative;
-}
-#home .masthead .information {
-  margin: 10em 1em 1em 350px;
-}
-#home .masthead .information p {
-  max-width: 600px;
-}
-#home .masthead .image {
-  position: absolute;
-  left: 0%;
-  bottom: -110px;
+	background-image: url(images/bg.jpg);
+	margin: 0em;
+	padding: 5rem 0rem;
 }
 
-/*--------------
-    Ribbons
----------------*/
+#home .masthead .column {
+	position: relative;
+}
+
+#home .masthead .column p {
+	font-size: 1.3em;
+}
+
+#home .masthead .information {
+	margin: 10em 1em 1em 350px;
+}
+
+#home .masthead .information p {
+	max-width: 600px;
+}
+
+#home .masthead .image {
+	position: absolute;
+	left: 0%;
+	bottom: -110px;
+}
 
 #home .segment h1 {
-  font-size: 2.8em;
-  margin-bottom: 1em;
+	font-size: 3em;
+	font-weight: normal;
+	margin-bottom: 1em;
+}
+
+#home .segment h1 > span {
+	font-size: 0.7em;
 }
 
 #home .vertical.segment {
-  padding: 12rem 0rem;
+	padding: 12rem 0rem;
 }
 
 #home .feature.segment {
-  margin: 0em;
-  padding: 6rem 0rem;
+	margin: 0em;
+	padding: 6rem 0rem;
 }
+
 #home .feature.segment p {
-  min-height: 50px;
+	min-height: 50px;
 }
 
 #home .selection.list {
-  margin: 0em -0.5em;
+	margin: 0em -0.5em;
 }
 
 #home .logo.row {
-  height: 10rem;
+	height: 10rem;
 }
 
-/*--------------
-    Footer
----------------*/
+#home .ui.form .field, #home .ui.form .error {
+	margin: 2em auto;
+	max-width: 600px;
+}
+
+#home .ui.form .field .button {
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+	float: right;
+	width: 30%;
+}
 
 #home .footer.segment {
-  background-color: #000000;
-  padding: 3rem 0rem;
+	background-color: #000000;
+	padding: 3rem 0rem;
 }
 
-
-/*******************************
-          Responsive
-*******************************/
-
-/* Mobile Only */
 @media only screen and (max-width : 768px) {
 
-  #home .menu .right.menu > .item {
-    display: none;
-  }
+	#home .menu .right.menu > .item {
+		display: none;
+	}
 
-  #home .menu .right.menu > .mobile.item {
-    display: block;
-  }
-  #home .menu .right.menu > .mobile.item .menu {
-    left: auto;
-    right: 0em;
-  }
+	#home .menu .right.menu > .mobile.item {
+		display: block;
+	}
+	#home .menu .right.menu > .mobile.item .menu {
+		left: auto;
+		right: 0em;
+	}
 
-  #home h1 {
-    font-size: 1.5em;
-  }
-  #home .masthead.segment .information {
-    margin-left: 170px;
-  }
+	#home h1 {
+		font-size: 1.5em;
+	}
 
-  #home .masthead.segment .image {
-    width: 170px;
-  }
+	#home span {
+		line-height: 0em;
+	}
 
-  #home .masthead.segment .button {
-    font-size: 1rem;
-  }
+	#home .masthead.segment .information {
+		margin-left: 170px;
+	}
 
-  #home .overview .divided.grid .header .icon {
-    font-size: 1.5em;
-  }
+	#home .masthead.segment .image {
+		width: 170px;
+	}
 
-  #home .overview .divided.grid .header + p {
-    min-height: 0px;
-  }
+	#home .masthead.segment .button {
+		font-size: 1rem;
+	}
 
-  #home .masthead.segment .column {
-    font-size: 0.7rem;
-  }
+	#home .overview .divided.grid .header .icon {
+		font-size: 1.5em;
+	}
 
-  #home .masthead.segment .column p {
-    display: none;
-  }
+	#home .overview .divided.grid .header + p {
+		min-height: 0px;
+	}
 
-  #home .selection.list .right.floated {
-    display: none;
-  }
+	#home .masthead.segment .column {
+		font-size: 0.7rem;
+	}
+
+	#home .masthead.segment .column p {
+		display: none;
+	}
+
+	#home .selection.list .right.floated {
+		display: none;
+	}
+
 }
