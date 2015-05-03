@@ -6,10 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<title>17&times;20th 建北電資研聯合幹部訓練營</title>
 	<link rel="stylesheet" type="text/css" href="dist/semantic.min.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="dist/semantic.min.js"></script>
-	<script src="script.js"></script>
+	<script src="js/jquery.datetimepicker.js"></script>
+	<script src="js/script.js"></script>
 </head>
 <body id="home">
 	<header class="ui inverted masthead segment">
@@ -34,7 +36,7 @@
 				<img src="images/cat.png" class="ui medium image">
 				<div class="ui hidden transition information">
 					<h1 class="ui inverted header">17&times;20<sup>th</sup> 建北電資研聯合幹部訓練營<br>
-					<span>CKEFGISC United Leader Training Camp</span></h1>
+					<span>CKEFGISC United Leader Training Camp 2015</span></h1>
 					<p>幹部訓練營 (ADA) 旨在培訓新任社團幹部的專業技術與營隊籌辦能力</p>
 					<div class="large basic inverted animated fade ui button">
 						<div class="visible content">參加 ADA 2015</div>
@@ -130,18 +132,56 @@
 						<div class="field">
 							<div class="ui labeled input">
 								<div class="ui label">姓名</div>
-								<input name="name" type="text" placeholder="username@domain.net">
+								<input name="name" type="text" placeholder="我是誰">
+							</div>
+						</div>
+						<div class="field">
+							<div class="ui label">社團</div>
+							<div class="ui radio checkbox checked">
+								<input name="club" type="radio" checked="checked">
+								<label>建中電研社</label>
+							</div>
+							<div class="ui radio checkbox">
+								<input name="club" type="radio">
+								<label>北一資研社</label>
+							</div>
+						</div>
+						<div class="field">
+							<div class="ui label">級別</div>
+							<div class="ui radio checkbox">
+								<input name="year" type="radio" checked="checked">
+								<label>'04 級</label>
+							</div>
+							<div class="ui radio checkbox">
+								<input name="year" type="radio">
+								<label>'05 級</label>
+							</div>
+							<div class="ui radio checkbox">
+								<input name="year" type="radio">
+								<label>'06 級</label>
 							</div>
 						</div>
 						<div class="field">
 							<div class="ui labeled input">
-								<div class="ui label">姓名</div>
-								<input name="name" type="text" placeholder="username@domain.net">
+								<div class="ui label">生日</div>
+								<input name="birth" type="text" placeholder="1999/01/01">
+							</div>
+						</div>						
+						<div class="field">
+							<div class="ui labeled input">
+								<div class="ui label">行動電話</div>
+								<input name="phone" type="text" placeholder="0912345678">
 							</div>
 						</div>
 						<div class="field">
 							<div class="ui labeled input">
-								<div class="ui label">姓名</div>
+								<div class="ui label">身份證字號</div>
+								<input name="idnum" type="text" placeholder="A123456789">
+							</div>
+						</div>
+						<div class="field">
+							<div class="ui labeled input">
+								<div class="ui label">電子郵件信箱</div>
 								<input name="email" type="text" placeholder="username@domain.net">
 							</div>
 						</div>

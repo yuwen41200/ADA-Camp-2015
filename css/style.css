@@ -7,7 +7,7 @@ html {
 }
 
 #home .masthead {
-	background-image: url(images/bg.jpg);
+	background-image: url(../images/bg.jpg);
 	margin: 0em;
 	padding: 5rem 0rem;
 }
@@ -68,6 +68,13 @@ html {
 #home .ui.form .field, #home .ui.form .error {
 	margin: 2em auto;
 	max-width: 600px;
+	text-align: left;
+}
+
+#home .ui.form .field .label {
+	font-size:  1rem;
+	padding-top: 0.78571em;
+	padding-bottom: 0.78571em;
 }
 
 #home .ui.form .field .button {
@@ -77,12 +84,16 @@ html {
 	width: 30%;
 }
 
+#home .ui.form .field .radio {
+	margin-left: 1.25em;
+}
+
 #home .footer.segment {
 	background-color: #000000;
 	padding: 3rem 0rem;
 }
 
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width: 768px) {
 
 	#home .menu .right.menu > .item {
 		display: none;
