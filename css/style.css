@@ -48,6 +48,16 @@ html {
 	padding: 12rem 0rem;
 }
 
+#home .vertical.segment .selection.list .item {
+	color: #fff;
+	cursor: default;
+	font-size: 1.1em;
+}
+
+#home .vertical.segment .right {
+	text-align: right;
+}
+
 #home .feature.segment {
 	margin: 0em;
 	padding: 6rem 0rem;

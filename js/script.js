@@ -104,3 +104,10 @@ $(document).ready(function() {
 	});
 
 });
+
+function goToApply() {
+	var destination = document.getElementsByTagName('section')[2];
+	$('html, body').animate({
+		scrollTop: $(destination).offset().top
+	}, 800);
+}
