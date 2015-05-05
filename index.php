@@ -85,7 +85,7 @@
 			</div>
 			<div class="row">
 				<div class="ten wide column">
-					<h3 class="ui inverted header">課程時間表</h3>
+					<h3 class="ui inverted header">必修課程</h3>
 					<div class="ui inverted animated selection list">
 						<div class="item">電子布告欄系統 Bulletin Board System<br>
 						胡惠慈 / 1A / 實作
@@ -102,6 +102,95 @@
 						<div class="item">經驗傳授 Experience Impartation<br>
 						林家瑜 / 3CD5B / 投影片、幹訓手冊
 							<div class="right floated">將學長姊的經驗傳承給學弟妹。</div>
+						</div>
+						<div class="item">成果發表會 Presentation<br>
+						許又升、薛暐薺、蒲郁文、黃宜文 / 5A / 分組發表
+							<div class="right floated">吉他：彈唱、演奏；<br>
+							3ds Max：畫出自己的 avatar；<br>
+							Workshop：Finish the designated project。</div>
+						</div>
+						<div class="item">球類大會 Ball Games<br>
+						許承佑、胡惠慈 / 5CD / 分組競賽
+							<div class="right floated">工程師長時間坐在椅子上，<br>
+							雙眼緊盯著電腦，<br>
+							是時候相約活動筋骨、揮灑青春了！</div>
+						</div>
+					</div>
+					<div class="ui inverted section divider"></div>
+					<h3 class="ui inverted header">選修課程</h3>
+					<div class="ui inverted animated selection list">
+						<div class="item">文字編輯器 Sublime Text<br>
+						許承佑 / 1B / 實作、電子講義
+							<div class="right floated">編輯器是軟體工程師不可或缺的工具之一，<br>
+							本課程將介紹一個伴隨工作的好夥伴。</div>
+						</div>
+						<div class="item">函數程式語言 Functional Programing<br>
+						陳力 / 2AB / 實作
+							<div class="right floated">認識函數式編程。</div>
+						</div>
+						<div class="item">3D 繪圖 3ds Max<br>
+						許又升 / 2CD / 實作
+							<div class="right floated">從最基礎的點、線、面教起，<br>
+							搭配材質和貼圖，<br>
+							把現實呈現在電腦裡。</div>
+						</div>
+						<div class="item">Workshop: Building a Graduation Ceremony Website<br>
+						蒲郁文 / 3AB / Implementation, Internet Resources
+							<div class="right floated">This is a student-oriented class,<br>
+							and no lectures will be provided.<br>
+							You should try to finish a project by yourself,<br>
+							but we will come to your aid if you need any help.<br>
+							選課須知：未修過「網頁前端」者擋修本課程。</div>
+						</div>
+						<div class="item">程式語言入門 Python Guide<br>
+						許承佑 / 4B / 實作、電子講義
+							<div class="right floated">講師將藉由自身經歷闡述「自學的藝術」，<br>
+							引導學生從各方尋找學習資源。</div>
+						</div>
+						<div class="item">LaTeX Typography<br>
+						黃宜文 / 4B / 實作、紙本講義
+							<div class="right floated">學習基礎 LaTeX 語言，<br>
+							並深入介紹數學排版、程式碼排版，<br>
+							幾種排版優勢與特色。</div>
+						</div>
+						<div class="item">影片剪輯觀念 Film Editing Concepts<br>
+						薛暐薺 / 4CD / 實作
+							<div class="right floated">擺脫轉場特效，<br>
+							重新認識剪接吧！</div>
+						</div>
+						<div class="item">專案管理 Project Management<br>
+						林家瑜 / 1B / 投影片
+							<div class="right floated">讓大家試著思考當你要舉辦一場活動時，<br>
+							應該從何開始！<br>
+							以及如何用更有效率的方式做事情！</div>
+						</div>
+						<div class="item">吉他 Guitar<br>
+						許又升 / 2AB / 黑板、講義
+							<div class="right floated">這堂課是一個讓你開始愛上樂器的契機，<br>
+							彈吉他是彈給自己聽的，<br>
+							是在追求用手指在平行的軌道上行駛出一道道優美的篇章。</div>
+						</div>
+						<div class="item">攝影 Photography<br>
+						薛暐薺 / 2CD / 投影片、外拍
+							<div class="right floated">器材不是絕對，<br>
+							手機也能拍出好照片。<br>
+							本課將帶你認識相片的因與果。</div>
+						</div>
+						<div class="item">戲劇 Drama<br>
+						黃宜文 / 3AB / 講述、實際演出、短片欣賞
+							<div class="right floated">生命中，<br>
+							每個人都在扮演屬於自己的角色，<br>
+							演出不難，<br>
+							但要演出得叫好又叫座卻另當別論。</div>
+						</div>
+						<div class="item">熱門音樂基礎 Popular Music Fundamentals<br>
+						蒲郁文 / 4AB / 投影片、影片、Guitar Pro 6
+							<div class="right floated">帶你掌握基本的熱門音樂元素與概念。<br>
+							推薦先修課程：吉他。</div>
+						</div>
+						<div class="item">文書處理 Word Processing<br>
+						鄭晴文、鄭琇蓉 / 4CD / 實作
+							<div class="right floated">教你製作精緻文件。</div>
 						</div>
 					</div>
 				</div>
