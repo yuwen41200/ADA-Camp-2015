@@ -8,6 +8,12 @@
 	<link rel="stylesheet" type="text/css" href="dist/semantic.min.css">
 	<link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script>
+		/* jshint ignore:start */
+		var applicationStatusCode = <?php echo $applicationStatusCode; ?>;
+		var applicationStatusMessage = <?php echo $applicationStatusMessage; ?>;
+		/* jshint ignore:end */
+	</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="dist/semantic.min.js"></script>
 	<script src="js/jquery.datetimepicker.js"></script>

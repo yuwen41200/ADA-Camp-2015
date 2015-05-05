@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	'use strict';
 
 	$('.ui.dropdown').dropdown({
 		on: 'hover'
@@ -106,6 +107,7 @@ $(document).ready(function() {
 });
 
 function goToApply() {
+	'use strict';
 	var destination = document.getElementsByTagName('section')[2];
 	$('html, body').animate({
 		scrollTop: $(destination).offset().top
