@@ -1,6 +1,7 @@
 <?php
 
 final class Route {
+
 	public $url_type = NULL;
 	public $url_array = array();
 
@@ -62,6 +63,7 @@ final class Route {
 			$this -> url_array['params'] = $url_process;
 		}
 	}
+
 }
 
 ?>

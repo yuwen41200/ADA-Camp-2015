@@ -1,6 +1,7 @@
 <?php
 
 final class Mysql {
+
 	private $host = NULL;
 	private $usr = NULL;
 	private $pwd = NULL;
@@ -137,6 +138,7 @@ final class Mysql {
 		}
 		return $value_array;
 	}
+
 }
 
 ?>

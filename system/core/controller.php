@@ -1,6 +1,7 @@
 <?php
 
 abstract class Controller {
+
 	public function __construct() {
 		header('Content-type: text/html; chartset=utf-8');
 	}
@@ -30,6 +31,7 @@ abstract class Controller {
 		$template -> init($path, $data);
 		$template -> output();
 	}
+
 }
 
 ?>

@@ -13,6 +13,7 @@ define('_SYS_LIB_PATH', _SYS_PATH.'/lib');
 define('_USE_CONFIG_FILE', _CONFIG_PATH.'/default.php');
 
 final class Application {
+
 	public static $_config = NULL;
 	public static $_lib = NULL;
 
@@ -101,6 +102,7 @@ final class Application {
 			return self::$_lib[$load_class] = new $u_load_class;
 		}
 	}
+
 }
 
 ?>

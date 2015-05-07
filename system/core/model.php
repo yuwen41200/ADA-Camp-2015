@@ -1,6 +1,7 @@
 <?php
 
 abstract class Model {
+
 	protected $db = NULL;
 	protected $cache = NULL;
 
@@ -34,6 +35,7 @@ abstract class Model {
 	final protected function config($config) {
 		return Application::$_config[$config];
 	}
+
 }
 
 ?>

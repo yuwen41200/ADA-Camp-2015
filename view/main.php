@@ -218,6 +218,7 @@
 				<div class="column">
 					<h1 class="ui header">填寫報名表</h1>
 					<div class="ui form segment">
+						<form action="/ada2015/index.php/act/submitFormAction" method="post">
 						<p>所有資料僅供保險之用，未經當事人同意，本社不會將資料用做其他用途。</p>
 						<div class="field">
 							<div class="ui labeled input">
@@ -277,11 +278,12 @@
 						</div>
 						<div class="ui error message"></div>
 						<div class="field">
-							<div class="ui black animated submit button">
+							<div class="ui black animated submit button" onclick="$(this).closet('form').submit()">
 								<div class="visible content">送出</div>
 								<div class="hidden content"><i class="right arrow icon"></i></div>
 							</div>
 						</div>
+						</form>
 					</div>
 				</div>
 			</div>

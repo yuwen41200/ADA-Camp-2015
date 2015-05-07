@@ -11,7 +11,7 @@ return array(
 	'db_conn_type' => '',
 	# set the value to 'p:' for persistent connection
 	'lib_prefix' => 'ext',
-	'route_default_controller' => 'main',
+	'route_default_controller' => 'Main',
 	'route_default_action' => 'index',
 	'route_url_type' => 2,
 	# for value 1, it will be 'index.php?ctl=m&act=n&id=k'
