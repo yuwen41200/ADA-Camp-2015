@@ -5,9 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<title>17&times;20th 建北電資研聯合幹部訓練營</title>
-	<link rel="stylesheet" type="text/css" href="<?php echo $view_directory; ?>dist/semantic.min.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo $view_directory; ?>style/jquery.datetimepicker.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo $view_directory; ?>style/main.css">
+	<link rel="stylesheet" type="text/css" href="/ada2015/view/dist/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="/ada2015/view/style/jquery.datetimepicker.css">
+	<link rel="stylesheet" type="text/css" href="/ada2015/view/style/main.css">
 	<script>
 		/* jshint ignore:start */
 		var applicationStatusCode = <?php echo $application_status_code; ?>;
@@ -15,9 +15,9 @@
 		/* jshint ignore:end */
 	</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="<?php echo $view_directory; ?>dist/semantic.min.js"></script>
-	<script src="<?php echo $view_directory; ?>script/jquery.datetimepicker.js"></script>
-	<script src="<?php echo $view_directory; ?>script/main.js"></script>
+	<script src="/ada2015/view/dist/semantic.min.js"></script>
+	<script src="/ada2015/view/script/jquery.datetimepicker.js"></script>
+	<script src="/ada2015/view/script/main.js"></script>
 </head>
 <body id="home">
 	<header class="ui inverted masthead segment">
@@ -39,7 +39,7 @@
 						<a class="item" href="mailto:yuwen41200.cs03@nctu.edu.tw" target="_blank">聯絡我們</a>
 					</div>
 				</div>
-				<img src="<?php echo $view_directory; ?>image/cat.png" class="ui medium image">
+				<img src="/ada2015/view/image/cat.png" class="ui medium image">
 				<div class="ui hidden transition information">
 					<h1 class="ui inverted header">17&times;20<sup>th</sup> 建北電資研聯合幹部訓練營<br>
 					<span>CKEFGISC United Leader Training Camp 2015</span></h1>
@@ -119,20 +119,38 @@
 					<div class="ui inverted section divider"></div>
 					<h3 class="ui inverted header">選修課程</h3>
 					<div class="ui inverted animated selection list">
-						<div class="item">文字編輯器 Sublime Text<br>
+						<div class="item">文字編輯器 Editors<br>
 						許承佑 / 1B / 實作、電子講義
 							<div class="right floated">編輯器是軟體工程師不可或缺的工具之一，<br>
 							本課程將介紹一個伴隨工作的好夥伴。</div>
 						</div>
+						<div class="item">專案管理 Project Management<br>
+						林家瑜 / 1B / 投影片
+							<div class="right floated">讓大家試著思考當你要舉辦一場活動時，<br>
+							應該從何開始！<br>
+							以及如何用更有效率的方式做事情！</div>
+						</div>
 						<div class="item">函數程式語言 Functional Programing<br>
 						陳力 / 2AB / 實作
 							<div class="right floated">認識函數式編程。</div>
+						</div>
+						<div class="item">吉他 Guitar<br>
+						許又升 / 2AB / 黑板、講義
+							<div class="right floated">這堂課是一個讓你開始愛上樂器的契機，<br>
+							彈吉他是彈給自己聽的，<br>
+							是在追求用手指在平行的軌道上行駛出一道道優美的篇章。</div>
 						</div>
 						<div class="item">3D 繪圖 3ds Max<br>
 						許又升 / 2CD / 實作
 							<div class="right floated">從最基礎的點、線、面教起，<br>
 							搭配材質和貼圖，<br>
 							把現實呈現在電腦裡。</div>
+						</div>
+						<div class="item">攝影 Photography<br>
+						薛暐薺 / 2CD / 投影片、外拍
+							<div class="right floated">器材不是絕對，<br>
+							手機也能拍出好照片。<br>
+							本課將帶你認識相片的因與果。</div>
 						</div>
 						<div class="item">Workshop: Building a Graduation Ceremony Website<br>
 						蒲郁文 / 3AB / Implementation, Internet Resources
@@ -142,40 +160,6 @@
 							but we will come to your aid if you need any help.<br>
 							選課須知：未修過「網頁前端」者擋修本課程。</div>
 						</div>
-						<div class="item">程式語言入門 Python Guide<br>
-						許承佑 / 4B / 實作、電子講義
-							<div class="right floated">講師將藉由自身經歷闡述「自學的藝術」，<br>
-							引導學生從各方尋找學習資源。</div>
-						</div>
-						<div class="item">LaTeX Typography<br>
-						黃宜文 / 4B / 實作、紙本講義
-							<div class="right floated">學習基礎 LaTeX 語言，<br>
-							並深入介紹數學排版、程式碼排版，<br>
-							幾種排版優勢與特色。</div>
-						</div>
-						<div class="item">影片剪輯觀念 Film Editing Concepts<br>
-						薛暐薺 / 4CD / 實作
-							<div class="right floated">擺脫轉場特效，<br>
-							重新認識剪接吧！</div>
-						</div>
-						<div class="item">專案管理 Project Management<br>
-						林家瑜 / 1B / 投影片
-							<div class="right floated">讓大家試著思考當你要舉辦一場活動時，<br>
-							應該從何開始！<br>
-							以及如何用更有效率的方式做事情！</div>
-						</div>
-						<div class="item">吉他 Guitar<br>
-						許又升 / 2AB / 黑板、講義
-							<div class="right floated">這堂課是一個讓你開始愛上樂器的契機，<br>
-							彈吉他是彈給自己聽的，<br>
-							是在追求用手指在平行的軌道上行駛出一道道優美的篇章。</div>
-						</div>
-						<div class="item">攝影 Photography<br>
-						薛暐薺 / 2CD / 投影片、外拍
-							<div class="right floated">器材不是絕對，<br>
-							手機也能拍出好照片。<br>
-							本課將帶你認識相片的因與果。</div>
-						</div>
 						<div class="item">戲劇 Drama<br>
 						黃宜文 / 3AB / 講述、實際演出、短片欣賞
 							<div class="right floated">生命中，<br>
@@ -183,10 +167,26 @@
 							演出不難，<br>
 							但要演出得叫好又叫座卻另當別論。</div>
 						</div>
+						<div class="item">程式語言入門 Python Guide<br>
+						林家瑜、許承佑 / 4AB / 實作、電子講義
+							<div class="right floated">講師將藉由自身經歷闡述「自學的藝術」，<br>
+							引導學生從各方尋找學習資源。</div>
+						</div>
 						<div class="item">熱門音樂基礎 Popular Music Fundamentals<br>
 						蒲郁文 / 4AB / 投影片、影片、Guitar Pro 6
 							<div class="right floated">帶你掌握基本的熱門音樂元素與概念。<br>
 							推薦先修課程：吉他。</div>
+						</div>
+						<!--<div class="item">LaTeX Typography<br>
+						黃宜文 / 4B / 實作、紙本講義
+							<div class="right floated">學習基礎 LaTeX 語言，<br>
+							並深入介紹數學排版、程式碼排版，<br>
+							幾種排版優勢與特色。</div>
+						</div>-->
+						<div class="item">影片剪輯觀念 Film Editing Concepts<br>
+						薛暐薺 / 4CD / 實作
+							<div class="right floated">擺脫轉場特效，<br>
+							重新認識剪接吧！</div>
 						</div>
 						<div class="item">文書處理 Word Processing<br>
 						鄭晴文、鄭琇蓉 / 4CD / 實作
@@ -217,7 +217,7 @@
 			<div class="row">
 				<div class="column">
 					<h1 class="ui header">填寫報名表</h1>
-					<form class="ui form segment" action="/ada2015/index.php/act/submitFormAction" method="post">
+					<form class="ui form segment" action="/ada2015/#/act/submitFormAction" method="post">
 						<p>所有資料僅供保險之用，未經當事人同意，本社不會將資料用做其他用途。</p>
 						<div class="field">
 							<div class="ui labeled input">
@@ -228,26 +228,26 @@
 						<div class="field">
 							<div class="ui label">社團</div>
 							<div class="ui radio checkbox checked">
-								<input name="club" type="radio" checked="checked">
+								<input name="club" type="radio" value="建中電研社" checked="checked">
 								<label>建中電研社</label>
 							</div>
 							<div class="ui radio checkbox">
-								<input name="club" type="radio">
+								<input name="club" type="radio" value="北一資研社">
 								<label>北一資研社</label>
 							</div>
 						</div>
 						<div class="field">
 							<div class="ui label">級別</div>
 							<div class="ui radio checkbox">
-								<input name="year" type="radio" checked="checked">
+								<input name="year" type="radio" value="'04 級" checked="checked">
 								<label>'04 級</label>
 							</div>
 							<div class="ui radio checkbox">
-								<input name="year" type="radio">
+								<input name="year" type="radio" value="'05 級">
 								<label>'05 級</label>
 							</div>
 							<div class="ui radio checkbox">
-								<input name="year" type="radio">
+								<input name="year" type="radio" value="'06 級">
 								<label>'06 級</label>
 							</div>
 						</div>
