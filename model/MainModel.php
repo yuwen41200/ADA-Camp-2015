@@ -8,9 +8,9 @@ class MainModel extends Model {
 		$table_name = $this -> table($table);
 		$column = 'name, club, year, birth, phone, idnum, email, idkey';
 		$this -> hash_value = password_hash($params['name'], PASSWORD_DEFAULT);
+		$params['idkey'] = $this -> hash_value;
 		$value = $this -> db -> checkValues($params);
 		$value = implode(', ', $value);
-		$value .= ", '".$this -> hash_value."'";
 		$this -> db -> insert($table_name, $column, $value);
 	}
 
