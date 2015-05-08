@@ -30,7 +30,7 @@ class MainModel extends Model {
 		$body .= '<tr><td>電子郵件信箱</td><td>'.htmlentities($params['email'], ENT_QUOTES, 'UTF-8').'</td></tr>';
 		$body .= '</table>';
 		$body .= "<p>你的選課金鑰是 <span style='color: red'>{$this -> hash_value}</span>，請使用此金鑰進行線上選課。<br>";
-		$body .= "線上選課網址：<a href='http://ckeisc.nctucs.net/ada2015/#/ctl/Enroll'>http://ckeisc.nctucs.net/ada2015/#/ctl/Enroll</a></p>";
+		$body .= "線上選課網址：<a href='http://ckeisc.nctucs.net/ada2015/index.php/ctl/Enroll'>http://ckeisc.nctucs.net/ada2015/index.php/ctl/Enroll</a></p>";
 		$body .= '<p>本郵件由系統自動寄出，請勿回覆。</p>';
 		$header = "MIME-Version: 1.0\r\n"."Content-type: text/html; charset=UTF-8\r\n";
 		mail($to, $subject, $body, $header);

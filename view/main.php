@@ -217,7 +217,7 @@
 			<div class="row">
 				<div class="column">
 					<h1 class="ui header">填寫報名表</h1>
-					<form class="ui form segment" action="/ada2015/#/act/submitFormAction" method="post">
+					<form class="ui form segment" action="/ada2015/index.php/act/submitFormAction" method="post">
 						<p>所有資料僅供保險之用，未經當事人同意，本社不會將資料用做其他用途。</p>
 						<div class="field">
 							<div class="ui labeled input">
