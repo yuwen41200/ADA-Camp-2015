@@ -330,10 +330,10 @@
 		</div>
 	</footer>
 	<div class="ui basic modal">
-		<div class="header">就快完成了！</div>
+		<div class="header">我們已經收到你的報名表囉，就快完成了！</div>
 		<div class="content">
 			<div class="image">
-				<i class="archive icon"></i>
+				<i class="mail square icon"></i>
 			</div>
 			<div class="description">
 				<p>請務必至你的電子郵件信箱收取通知信，以完成報名程序。</p>
@@ -341,7 +341,7 @@
 		</div>
 		<div class="actions">
 			<div class="ui green basic inverted button">
-				<i class="checkmark icon"></i>確定
+				<i class="checkmark icon"></i>好喔
 			</div>
 		</div>
 	</div>
