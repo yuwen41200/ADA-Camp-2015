@@ -15,7 +15,7 @@ return array(
 	'route_default_action' => 'index',
 	'route_url_type' => 2,
 	# for value 1, it will be 'index.php?ctl=m&act=n&id=k'
-	# for value 2, it will be '#/ctl/m/act/n/id/k'
+	# for value 2, it will be 'index.php/ctl/m/act/n/id/k'
 	'cache_dir' => 'cache',
 	'cache_prefix' => 'cache_',
 	'cache_time' => 1800,

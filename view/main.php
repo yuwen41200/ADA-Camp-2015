@@ -14,7 +14,7 @@
 		var applicationStatusMessage = <?php echo $application_status_message; ?>;
 		/* jshint ignore:end */
 	</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="/ada2015/view/dist/semantic.min.js"></script>
 	<script src="/ada2015/view/script/jquery.datetimepicker.js"></script>
 	<script src="/ada2015/view/script/main.js"></script>
@@ -329,5 +329,21 @@
 			</div>
 		</div>
 	</footer>
+	<div class="ui basic modal">
+		<div class="header">就快完成了！</div>
+		<div class="content">
+			<div class="image">
+				<i class="archive icon"></i>
+			</div>
+			<div class="description">
+				<p>請務必至你的電子郵件信箱收取通知信，以完成報名程序。</p>
+			</div>
+		</div>
+		<div class="actions">
+			<div class="ui green basic inverted button">
+				<i class="checkmark icon"></i>確定
+			</div>
+		</div>
+	</div>
 </body>
 </html>

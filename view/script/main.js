@@ -104,12 +104,18 @@ $(document).ready(function() {
 		on: 'blur'
 	});
 
+	if (applicationStatusCode == 1)
+		$('.ui.basic.modal').modal('show');
+
 });
 
 function goToApply() {
 	'use strict';
+
 	var destination = document.getElementsByTagName('section')[2];
+
 	$('html, body').animate({
 		scrollTop: $(destination).offset().top
 	}, 800);
+
 }
