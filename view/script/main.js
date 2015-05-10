@@ -1,6 +1,9 @@
 $(document).ready(function() {
 	'use strict';
 
+	if (applicationStatusCode == 1)
+		$('.ui.basic.modal').modal('show');
+
 	$('.ui.dropdown').dropdown({
 		on: 'hover'
 	});
@@ -20,7 +23,9 @@ $(document).ready(function() {
 
 	setInterval(animateIcons, 3200);
 
-	$('.ui.radio.checkbox').checkbox();
+	$('.menu .item').tab();
+
+	$('.ui.checkbox').checkbox();
 
 	$('.ui.form input[name="birth"]').datetimepicker({
 		timepicker: false,
@@ -103,9 +108,6 @@ $(document).ready(function() {
 	$('.ui.form').form(validationRules, {
 		on: 'blur'
 	});
-
-	if (applicationStatusCode == 1)
-		$('.ui.basic.modal').modal('show');
 
 });
 
