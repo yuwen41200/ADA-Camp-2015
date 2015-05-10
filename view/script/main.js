@@ -33,6 +33,32 @@ $(document).ready(function() {
 		lang: 'zh-TW'
 	});
 
+	var printAmount = function() {
+		var items = '', total;
+		$('.ui.form input:checked').each(function() {
+			items += $(this).val();
+		});
+		if (items.indexOf('學術課程')>=0 && items.indexOf('活動課程')==-1 && items.indexOf('加購紀念 T 恤')==-1)
+			total = 500;
+		else if (items.indexOf('學術課程')==-1 && items.indexOf('活動課程')>=0 && items.indexOf('加購紀念 T 恤')==-1)
+			total = 2100;
+		else if (items.indexOf('學術課程')==-1 && items.indexOf('活動課程')==-1 && items.indexOf('加購紀念 T 恤')>=0)
+			total = 250;
+		else if (items.indexOf('學術課程')>=0 && items.indexOf('活動課程')>=0 && items.indexOf('加購紀念 T 恤')==-1)
+			total = 2500;
+		else if (items.indexOf('學術課程')>=0 && items.indexOf('活動課程')==-1 && items.indexOf('加購紀念 T 恤')>=0)
+			total = 650;
+		else if (items.indexOf('學術課程')==-1 && items.indexOf('活動課程')>=0 && items.indexOf('加購紀念 T 恤')>=0)
+			total = 2250;
+		else if (items.indexOf('學術課程')>=0 && items.indexOf('活動課程')>=0 && items.indexOf('加購紀念 T 恤')>=0)
+			total = 2650;
+		else
+			total = 0;
+		$('.ui.form .green.label').text('費用總計：NT$ ' + total);
+	};
+
+	$('.ui.form .ui.checkbox:not(.radio)').on('click', printAmount);
+
 	var validationRules = {
 		name: {
 			identifier: 'name',

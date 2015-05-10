@@ -3,10 +3,15 @@
 class MainModel extends Model {
 
 	private $hash_value = NULL;
+	private $enroll_str = NULL;
 
 	function insertRow($table, $params) {
 		$table_name = $this -> table($table);
-		$column = 'name, club, year, birth, phone, idnum, email, idkey';
+		$column = 'name, club, year, birth, phone, idnum, email, food, enroll, idkey';
+		if (empty($params['enroll']))
+			die('你什麼活動都不參加，那你填報名表幹嘛？');
+		$this -> enroll_str = implode('；', $params['enroll']);
+		$params['enroll'] = $this -> enroll_str;
 		$this -> hash_value = password_hash($params['name'], PASSWORD_DEFAULT);
 		$params['idkey'] = $this -> hash_value;
 		$value = $this -> db -> checkValues($params);
@@ -29,11 +34,11 @@ class MainModel extends Model {
 		$body .= '<tr><td>行動電話</td><td>'.htmlentities($params['phone'], ENT_QUOTES, 'UTF-8').'</td></tr>';
 		$body .= '<tr><td>身份證字號</td><td>'.htmlentities($params['idnum'], ENT_QUOTES, 'UTF-8').'</td></tr>';
 		$body .= '<tr><td>電子郵件信箱</td><td>'.htmlentities($params['email'], ENT_QUOTES, 'UTF-8').'</td></tr>';
+		$body .= '<tr><td>飲食</td><td>'.htmlentities($params['food'], ENT_QUOTES, 'UTF-8').'</td></tr>';
+		$body .= '<tr><td>報名項目</td><td>'.htmlentities($this -> enroll_str, ENT_QUOTES, 'UTF-8').'</td></tr>';
 		$body .= '</table>';
 		$body .= "<p>你的選課金鑰是 <span style='color: red'>{$this -> hash_value}</span>，<br>";
-		$body .= '請使用此金鑰進行線上選課。<br>';
-		$body .= "線上選課網址：<a href='http://ckeisc.nctucs.net/ada2015/index.php/ctl/Enroll' target='_blank'>http://ckeisc.nctucs.net/ada2015/index.php/ctl/Enroll</a><br>";
-		$body .= '（本系統將於 7/1 開放）</p>';
+		$body .= "7/1 開始你可以用此金鑰 <a href='http://ckeisc.nctucs.net/ada2015/index.php/ctl/Enroll' target='_blank'>進行線上選課</a>。</p>";
 		$body .= '<p>本郵件由系統自動寄出，請勿回覆。</p>';
 		$header = "MIME-Version: 1.0\r\n"."Content-type: text/html; charset=UTF-8\r\n";
 		mail($to, $subject, $body, $header);

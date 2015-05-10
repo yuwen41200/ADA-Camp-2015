@@ -35,7 +35,7 @@ html {
 }
 
 #home .segment h1 {
-	font-size: 3em;
+	font-size: 2.8em;
 	font-weight: normal;
 	margin-bottom: 1em;
 }
@@ -92,6 +92,7 @@ html {
 	margin: 2em auto;
 	max-width: 600px;
 	text-align: left;
+	position: relative;
 }
 
 #home .ui.form .field .label {
@@ -101,7 +102,8 @@ html {
 }
 
 #home .ui.form .field .green.label {
-	float: right;
+	position: absolute;
+	right: 0px;
 	margin-bottom: 2em;
 }
 
@@ -173,6 +175,10 @@ html {
 	}
 
 	#home .selection.list .right.floated {
+		display: none;
+	}
+
+	#home .ui.form .field .green.label {
 		display: none;
 	}
 
