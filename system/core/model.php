@@ -6,7 +6,7 @@ abstract class Model {
 	protected $cache = NULL;
 
 	final public function __construct() {
-		header('Content-type: text/html; chartset=utf-8');
+		header('Content-type: text/html; charset=utf-8');
 		$this -> db = $this -> lib('mysql');
 		$this -> db -> init(
 			$this -> config('db_host'),

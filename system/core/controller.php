@@ -3,7 +3,7 @@
 abstract class Controller {
 
 	public function __construct() {
-		header('Content-type: text/html; chartset=utf-8');
+		header('Content-type: text/html; charset=utf-8');
 	}
 
 	final protected function model($model) {

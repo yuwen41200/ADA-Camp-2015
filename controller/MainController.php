@@ -2,10 +2,6 @@
 
 class MainController extends Controller {
 
-	public function __construct() {
-		parent::__construct();
-	}
-
 	public function index() {
 		$data['application_status_code'] = '0';
 		$data['application_status_message'] = '\'No error occurred.\'';

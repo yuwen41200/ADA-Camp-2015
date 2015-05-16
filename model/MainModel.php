@@ -7,7 +7,7 @@ class MainModel extends Model {
 
 	function insertRow($table, $params) {
 		$table_name = $this -> table($table);
-		$column = 'name, club, year, birth, phone, idnum, email, food, enroll, idkey';
+		$column = 'name, club, year, birth, phone, idnum, email, food, enroll, note, idkey';
 		if (empty($params['enroll']))
 			die('你什麼活動都不參加，那你填報名表幹嘛？');
 		$this -> enroll_str = implode('；', $params['enroll']);
@@ -22,25 +22,53 @@ class MainModel extends Model {
 	function sendMail($params) {
 		if (!preg_match('/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i', $params['email']))
 			die('電子郵件信箱無效');
-		$to = htmlentities($params['email'], ENT_QUOTES, 'UTF-8');
+		foreach ($params as $key => $value)
+			$params[$key] = htmlentities($params[$key], ENT_QUOTES, 'UTF-8');
+		$this -> enroll_str = htmlentities($this -> enroll_str, ENT_QUOTES, 'UTF-8');
+		$this -> hash_value = htmlentities($this -> hash_value, ENT_QUOTES, 'UTF-8');
+		$to = $params['email'];
 		$subject = '=?UTF-8?B?'.base64_encode('ADA 2015 報名通知信').'?=';
-		$body = '<p>好耶！感謝你的報名，我們都很期待見到你喔∼</p>';
-		$body .= '<p>以下是你的報名資料：</p>';
-		$body .= "<table style='border-collapse: collapse; width: 500px;'>";
-		$body .= "<tr><td style='width: 150px'>姓名</td><td>".htmlentities($params['name'], ENT_QUOTES, 'UTF-8').'</td></tr>';
-		$body .= '<tr><td>社團</td><td>'.htmlentities($params['club'], ENT_QUOTES, 'UTF-8').'</td></tr>';
-		$body .= '<tr><td>級別</td><td>'.htmlentities($params['year'], ENT_QUOTES, 'UTF-8').'</td></tr>';
-		$body .= '<tr><td>生日</td><td>'.htmlentities($params['birth'], ENT_QUOTES, 'UTF-8').'</td></tr>';
-		$body .= '<tr><td>行動電話</td><td>'.htmlentities($params['phone'], ENT_QUOTES, 'UTF-8').'</td></tr>';
-		$body .= '<tr><td>身份證字號</td><td>'.htmlentities($params['idnum'], ENT_QUOTES, 'UTF-8').'</td></tr>';
-		$body .= '<tr><td>電子郵件信箱</td><td>'.htmlentities($params['email'], ENT_QUOTES, 'UTF-8').'</td></tr>';
-		$body .= '<tr><td>飲食</td><td>'.htmlentities($params['food'], ENT_QUOTES, 'UTF-8').'</td></tr>';
-		$body .= '<tr><td>報名項目</td><td>'.htmlentities($this -> enroll_str, ENT_QUOTES, 'UTF-8').'</td></tr>';
-		$body .= '</table>';
-		$body .= "<p>你的選課金鑰是 <span style='color: red'>{$this -> hash_value}</span>，<br>";
-		$body .= "7/1 開始你可以用此金鑰 <a href='http://ckeisc.nctucs.net/ada2015/index.php/ctl/Enroll' target='_blank'>進行線上選課</a>。</p>";
-		$body .= '<p>本郵件由系統自動寄出，請勿回覆。</p>';
-		$header = "MIME-Version: 1.0\r\n"."Content-type: text/html; charset=UTF-8\r\n";
+		$body = <<<MESSAGE
+<!DOCTYPE html>\r\n
+<html>\r\n
+<head>\r\n
+	<style type='text/css'>\r\n
+		table {\r\n
+			border-collapse: collapse;\r\n
+			width: 500px;\r\n
+		}\r\n
+		td {\r\n
+			border: 1px solid black;\r\n
+		}\r\n
+		td:first-child {\r\n
+			width: 120px;\r\n
+		}\r\n
+	</style>\r\n
+</head>\r\n
+<body>\r\n
+	<p>好耶！感謝你的報名，我們都很期待見到你喔∼</p>\r\n
+	<p>以下是你的報名資料：</p>\r\n
+	<table>\r\n
+		<tr><td>姓名</td><td>$params[name]</td></tr>\r\n
+		<tr><td>社團</td><td>$params[club]</td></tr>\r\n
+		<tr><td>級別</td><td>$params[year]</td></tr>\r\n
+		<tr><td>生日</td><td>$params[birth]</td></tr>\r\n
+		<tr><td>行動電話</td><td>$params[phone]</td></tr>\r\n
+		<tr><td>身份證字號</td><td>$params[idnum]</td></tr>\r\n
+		<tr><td>電子郵件信箱</td><td>$params[email]</td></tr>\r\n
+		<tr><td>飲食</td><td>$params[food]</td></tr>\r\n
+		<tr><td>報名項目</td><td>$this->enroll_str</td></tr>\r\n
+		<tr><td>備註</td><td>$params[note]</td></tr>\r\n
+	</table>\r\n
+	<p>你的選課金鑰為：<span style='color: red'>$this->hash_value</span><br>\r\n
+	請使用此金鑰進行線上選課。</p>\r\n
+	<p>線上選課網址：<a href='http://ckeisc.nctucs.net/ada2015/index.php/ctl/Enroll' target='_blank'>http://ckeisc.nctucs.net/ada2015/index.php/ctl/Enroll</a><br>\r\n
+	本系統將於 7/1 開放。</p>\r\n
+	<p>本郵件由系統自動寄出，請勿回覆。</p>\r\n
+</body>\r\n
+</html>\r\n
+MESSAGE;
+		$header = "MIME-Version: 1.0\r\nContent-type: text/html; charset=utf-8\r\n";
 		mail($to, $subject, $body, $header);
 	}
 
