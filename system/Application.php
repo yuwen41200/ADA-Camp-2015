@@ -20,7 +20,7 @@ final class Application {
 	public static function init() {
 		self::$_config = require_once _USE_CONFIG_FILE;
 		if (empty(self::$_config['web_root']))
-			self::$_config['web_root'] = dirname(dirname($_SERVER['SCRIPT_NAME']));
+			self::$_config['web_root'] = dirname($_SERVER['SCRIPT_NAME']);
 		self::$_lib = array(
 			'cache' => _SYS_LIB_PATH.'/Cache.php',
 			'mysql'=> _SYS_LIB_PATH.'/Mysql.php',
