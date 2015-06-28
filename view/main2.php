@@ -5,9 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<title>17&times;20th 建北電資研聯合幹部訓練營</title>
-	<link rel="stylesheet" type="text/css" href="<?php echo $web_root; ?>/view/dist/semantic.min.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo $web_root; ?>/view/style/jquery.datetimepicker.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo $web_root; ?>/view/style/main.css">
+	<link rel="stylesheet" type="text/css" href="/~ywpu/ada2015/view/dist/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="/~ywpu/ada2015/view/style/jquery.datetimepicker.css">
+	<link rel="stylesheet" type="text/css" href="/~ywpu/ada2015/view/style/main.css">
 	<script>
 		/* jshint ignore:start */
 		var applicationStatusCode = <?php echo $application_status_code; ?>;
@@ -15,9 +15,9 @@
 		/* jshint ignore:end */
 	</script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="<?php echo $web_root; ?>/view/dist/semantic.min.js"></script>
-	<script src="<?php echo $web_root; ?>/view/script/jquery.datetimepicker.js"></script>
-	<script src="<?php echo $web_root; ?>/view/script/main.js"></script>
+	<script src="/~ywpu/ada2015/view/dist/semantic.min.js"></script>
+	<script src="/~ywpu/ada2015/view/script/jquery.datetimepicker.js"></script>
+	<script src="/~ywpu/ada2015/view/script/main.js"></script>
 </head>
 <body id="home">
 	<header class="ui inverted masthead segment">
@@ -256,7 +256,7 @@
 			<div class="row">
 				<div class="column">
 					<h1 class="ui header">填寫報名表</h1>
-					<form class="ui form segment" action="<?php echo $web_root; ?>/index/act/submitFormAction" method="post">
+					<form class="ui form segment" action="/~ywpu/ada2015/index.php/act/submitFormAction" method="post">
 						<p>所有資料僅供保險之用，未經當事人同意，本社不會將資料用做其他用途。</p>
 						<div class="field">
 							<div class="ui labeled input">

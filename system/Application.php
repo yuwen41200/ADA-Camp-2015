@@ -19,6 +19,8 @@ final class Application {
 
 	public static function init() {
 		self::$_config = require_once _USE_CONFIG_FILE;
+		if (empty(self::$_config['web_root']))
+			self::$_config['web_root'] = dirname(dirname($_SERVER['SCRIPT_NAME']));
 		self::$_lib = array(
 			'cache' => _SYS_LIB_PATH.'/Cache.php',
 			'mysql'=> _SYS_LIB_PATH.'/Mysql.php',
@@ -27,12 +29,15 @@ final class Application {
 		);
 		require_once _SYS_CORE_PATH.'/Model.php';
 		require_once _SYS_CORE_PATH.'/Controller.php';
+		if (version_compare(PHP_VERSION, '5.5.0', '<'))
+			require_once dirname(__FILE__).'/pwdfunc.php';
 	}
 
 	public static function load() {
 		foreach (self::$_lib as $key => $value) {
 			require_once $value;
-			self::$_lib[$key] = new ucfirst($key);
+			$uc_key = ucfirst($key);
+			self::$_lib[$key] = new $uc_key;
 		}
 		if (is_object(self::$_lib['cache'])) {
 			self::$_lib['cache'] -> init(

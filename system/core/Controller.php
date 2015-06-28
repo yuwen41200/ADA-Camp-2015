@@ -2,14 +2,14 @@
 
 abstract class Controller {
 
-	public function __construct() {
+	final public function __construct() {
 		header('Content-type: text/html; charset=utf-8');
 	}
 
 	final protected function model($model) {
 		if (empty($model))
 			return NULL;
-		$model .= 'Model';
+		$model = ucfirst($model).'Model';
 		return new $model;
 	}
 

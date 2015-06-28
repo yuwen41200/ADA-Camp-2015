@@ -2,10 +2,12 @@
 
 class AdminController extends Controller {
 
-	public function index($params) {
-		# DANGER: DO NOT ACCIDENTALLY COMMIT THE SECRET KEY INTO GITHUB
+	public function index() { }
+
+	public function show($params = NULL) {
 		if ($params['secret'] == '') {
-			$mod = $this -> model('Admin');
+		# DANGER: DO NOT ACCIDENTALLY COMMIT THE SECRET KEY ONTO GITHUB!
+			$mod = $this -> model('admin');
 			echo $mod -> showSecret('ada2015');
 		}
 	}

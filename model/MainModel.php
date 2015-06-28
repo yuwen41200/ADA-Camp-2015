@@ -23,7 +23,7 @@ class MainModel extends Model {
 		if (!preg_match('/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i', $params['email']))
 			die('電子郵件信箱無效');
 		foreach ($params as $key => $value)
-			$params[$key] = htmlentities($params[$key], ENT_QUOTES, 'UTF-8');
+			$params[$key] = htmlentities((string) $params[$key], ENT_QUOTES, 'UTF-8');
 		$this -> enroll_str = htmlentities($this -> enroll_str, ENT_QUOTES, 'UTF-8');
 		$this -> hash_value = htmlentities($this -> hash_value, ENT_QUOTES, 'UTF-8');
 		$to = $params['email'];
@@ -62,7 +62,7 @@ class MainModel extends Model {
 	</table>\r\n
 	<p>你的選課金鑰為：<span style='color: red'>$this->hash_value</span><br>\r\n
 	請使用此金鑰進行線上選課。</p>\r\n
-	<p>線上選課網址：<a href='http://ckeisc.nctucs.net/ada2015/index.php/ctl/Enroll' target='_blank'>http://ckeisc.nctucs.net/ada2015/index.php/ctl/Enroll</a><br>\r\n
+	<p>線上選課網址：<a href='http://people.cs.nctu.edu.tw/~ywpu/ada2015/index/ctl/enroll' target='_blank'>http://people.cs.nctu.edu.tw/~ywpu/ada2015/index/ctl/enroll</a><br>\r\n
 	本系統將於 7/1 開放。</p>\r\n
 	<p>本郵件由系統自動寄出，請勿回覆。</p>\r\n
 </body>\r\n

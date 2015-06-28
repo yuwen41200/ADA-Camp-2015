@@ -5,7 +5,7 @@ class AdminModel extends Model {
 	public function showSecret($table) {
 		$table_name = $this -> table($table);
 		$result = $this -> db -> select('*', $table_name);
-		$output = "<table><tr><td colspan='14'>Dump from table '$table_name'</td></tr>\n";
+		$output = "<table style='white-space: nowrap;'><tr><td colspan='14'>Dump from table '$table_name'</td></tr>\n";
 		$output .= "<tr><td>id</td>";
 		$output .= "<td>name</td>";
 		$output .= "<td>club</td>";
