@@ -3,7 +3,19 @@
 class EnrollController extends Controller {
 
 	public function index() {
-		die("<p>線上選課系統將於 7/1 開放<br>\n請保管好你的選課金鑰喔∼</p>\n");
+		$data['application_status_code'] = '0';
+		$data['application_status_message'] = '\'No error occurred.\'';
+		$data['web_root'] = $this -> config('web_root');
+		$this -> template('form', $data);
+	}
+
+	public function submitFormAction() {
+		// $mod = $this -> model('enroll');
+		// $mod -> insertRow('ada2015_course', $_POST);
+		$data['application_status_code'] = '1';
+		$data['application_status_message'] = '\'Successfully enrolled.\'';
+		$data['web_root'] = $this -> config('web_root');
+		$this -> template('form', $data);
 	}
 
 }

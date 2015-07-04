@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<title>17&times;20th 建北電資研聯合幹部訓練營</title>
-	<link rel="stylesheet" type="text/css" href="<?php echo $web_root; ?>/view/dist/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/semantic.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo $web_root; ?>/view/style/jquery.datetimepicker.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo $web_root; ?>/view/style/main.css">
 	<script>
@@ -15,7 +15,7 @@
 		/* jshint ignore:end */
 	</script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="<?php echo $web_root; ?>/view/dist/semantic.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.3/semantic.min.js"></script>
 	<script src="<?php echo $web_root; ?>/view/script/jquery.datetimepicker.js"></script>
 	<script src="<?php echo $web_root; ?>/view/script/main.js"></script>
 </head>

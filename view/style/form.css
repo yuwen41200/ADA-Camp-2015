@@ -1,0 +1,8 @@
+body {
+	max-width: 560px;
+	margin: 20px auto;
+}
+
+body .ui.info.message .header {
+	margin-bottom: 10px;
+}
