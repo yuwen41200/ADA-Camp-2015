@@ -1,37 +1,52 @@
--- MySQL dump 10.13  Distrib 5.5.43, for debian-linux-gnu (x86_64)
+-- phpMyAdmin SQL Dump
+-- version 4.2.9
+-- http://www.phpmyadmin.net
 --
--- Host: localhost    Database: ckeisc
--- ------------------------------------------------------
--- Server version	5.5.43-0ubuntu0.14.04.1
+-- 主機: dbhome.cs.nctu.edu.tw
+-- 產生時間： 2015 年 07 月 06 日 03:26
+-- 伺服器版本: 5.6.24-log
+-- PHP 版本： 5.3.29
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Current Database: `ckeisc`
+-- 資料庫： `ywpu_cs`
+--
+CREATE DATABASE IF NOT EXISTS `ywpu_cs` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `ywpu_cs`;
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `ada2015_course`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `ckeisc` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE TABLE IF NOT EXISTS `ada2015_course` (
+`id` int(11) NOT NULL,
+  `sid` int(11) NOT NULL,
+  `1B` varchar(50) NOT NULL,
+  `2AB` varchar(50) NOT NULL,
+  `2CD` varchar(50) NOT NULL,
+  `3AB` varchar(50) NOT NULL,
+  `4AB` varchar(50) NOT NULL,
+  `4CD` varchar(50) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
-USE `ckeisc`;
+-- --------------------------------------------------------
 
 --
--- Table structure for table `web_ada2015`
+-- 資料表結構 `ada2015_student`
 --
 
-DROP TABLE IF EXISTS `web_ada2015`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `web_ada2015` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `ada2015_student` (
+`id` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
   `club` varchar(50) NOT NULL,
   `year` varchar(50) NOT NULL,
@@ -44,27 +59,72 @@ CREATE TABLE `web_ada2015` (
   `note` varchar(255) DEFAULT NULL,
   `paid` tinyint(1) NOT NULL DEFAULT '0',
   `idkey` varchar(255) NOT NULL,
-  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `web_ada2015`
+-- 資料表結構 `web_framework_test`
 --
 
-LOCK TABLES `web_ada2015` WRITE;
-/*!40000 ALTER TABLE `web_ada2015` DISABLE KEYS */;
-/*!40000 ALTER TABLE `web_ada2015` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+CREATE TABLE IF NOT EXISTS `web_framework_test` (
+`id` int(20) NOT NULL,
+  `content` varchar(255) NOT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4;
 
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+--
+-- 已匯出資料表的索引
+--
+
+--
+-- 資料表索引 `ada2015_course`
+--
+ALTER TABLE `ada2015_course`
+ ADD PRIMARY KEY (`id`), ADD KEY `frnky` (`sid`);
+
+--
+-- 資料表索引 `ada2015_student`
+--
+ALTER TABLE `ada2015_student`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- 資料表索引 `web_framework_test`
+--
+ALTER TABLE `web_framework_test`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- 在匯出的資料表使用 AUTO_INCREMENT
+--
+
+--
+-- 使用資料表 AUTO_INCREMENT `ada2015_course`
+--
+ALTER TABLE `ada2015_course`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
+-- 使用資料表 AUTO_INCREMENT `ada2015_student`
+--
+ALTER TABLE `ada2015_student`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+--
+-- 使用資料表 AUTO_INCREMENT `web_framework_test`
+--
+ALTER TABLE `web_framework_test`
+MODIFY `id` int(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=35;
+--
+-- 已匯出資料表的限制(Constraint)
+--
+
+--
+-- 資料表的 Constraints `ada2015_course`
+--
+ALTER TABLE `ada2015_course`
+ADD CONSTRAINT `frnky` FOREIGN KEY (`sid`) REFERENCES `ada2015_student` (`id`) ON UPDATE CASCADE;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2015-05-16 21:42:38
