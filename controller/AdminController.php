@@ -8,7 +8,7 @@ class AdminController extends Controller {
 		if ($params['secret'] == '') {
 		# DANGER: DO NOT ACCIDENTALLY COMMIT THE SECRET KEY ONTO GITHUB!
 			$mod = $this -> model('admin');
-			echo $mod -> showSecret('ada2015');
+			echo $mod -> showSecret('student');
 		}
 	}
 

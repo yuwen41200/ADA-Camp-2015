@@ -21,6 +21,10 @@
 	<div class="ui info message">
 		<div class="header">每個時段請選擇一門專業課程或一門核心課程。</div>
 		<form class="ui form" name="sendForm" action="<?php echo $web_root; ?>/index/ctl/enroll/act/submitFormAction" method="post">
+			<div class="field">
+				<label for="key">請輸入您的選課金鑰</label>
+				<input type="text" name="key">
+			</div>
 			<div class="grouped fields">
 				<label for="1B">授課時段：1B</label>
 				<div class="field">

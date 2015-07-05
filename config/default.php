@@ -6,7 +6,7 @@ return array(
 	'db_password' => '',
 	# DANGER: DO NOT ACCIDENTALLY COMMIT THE PASSWORD ONTO GITHUB!
 	'db_database' => 'ywpu_cs',
-	'db_table_prefix' => 'web_',
+	'db_table_prefix' => 'ada2015_',
 	'db_charset' => 'utf8',
 	'db_conn_type' => '',
 	# Set the value to 'p:' for persistent connection, '' otherwise.
@@ -23,7 +23,7 @@ return array(
 	'cache_time' => 1800,
 	'cache_mode' => 2,
 	# For value 1, the cache will be serialized; for value 2, it will be saved as an executable file.
-	'app_version' => '2.0'
+	'app_version' => '1.2'
 );
 
 ?>

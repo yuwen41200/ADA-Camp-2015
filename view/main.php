@@ -359,6 +359,7 @@
 							</div>
 						</div>
 					</form>
+					<p><a href="<?php echo $web_root; ?>/index/ctl/enroll" target="_blank">已經報名？按這裡開始選課！</a></p>
 				</div>
 			</div>
 		</div>

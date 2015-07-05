@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	'use strict';
 
-	if (applicationStatusCode == 1)
+	if (applicationStatusCode)
 		alert(applicationStatusMessage);
 
 	$('.ui.radio.checkbox').checkbox();

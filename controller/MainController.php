@@ -11,10 +11,10 @@ class MainController extends Controller {
 
 	public function submitFormAction() {
 		$mod = $this -> model('main');
-		$mod -> insertRow('ada2015', $_POST);
+		$mod -> insertRow('student', $_POST);
 		$mod -> sendMail($_POST);
 		$data['application_status_code'] = '1';
-		$data['application_status_message'] = '\'Successfully enrolled.\'';
+		$data['application_status_message'] = '\'Successfully applied.\'';
 		$data['web_root'] = $this -> config('web_root');
 		$this -> template('main', $data);
 	}
