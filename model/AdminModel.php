@@ -50,7 +50,7 @@ FROM $table_name1
 LEFT OUTER JOIN $table_name2
 ON $table_name1.sid = $table_name2.id;
 QUERY
-);
+		);
 		$output = "<table style='white-space: nowrap;'><tr><td colspan='9'>Dump from table '$table_name1' (references table '$table_name2')</td></tr>\n";
 		$output .= "<tr><td>id</td>";
 		$output .= "<td>sid</td>";
