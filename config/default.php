@@ -23,7 +23,7 @@ return array(
 	'cache_time' => 1800,
 	'cache_mode' => 2,
 	# For value 1, the cache will be serialized; for value 2, it will be saved as an executable file.
-	'app_version' => '1.2'
+	'app_version' => '1.3'
 );
 
 ?>

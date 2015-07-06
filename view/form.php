@@ -26,21 +26,6 @@
 				<input type="text" name="key">
 			</div>
 			<div class="grouped fields">
-				<label for="1B">授課時段：1B</label>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input type="radio" name="1B" checked="" tabindex="0" class="hidden" value="文字編輯器 Editors">
-						<label>文字編輯器 Editors</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input type="radio" name="1B" tabindex="0" class="hidden" value="專案管理 Project Management">
-						<label>專案管理 Project Management</label>
-					</div>
-				</div>
-			</div>
-			<div class="grouped fields">
 				<label for="2AB">授課時段：2AB</label>
 				<div class="field">
 					<div class="ui radio checkbox">
@@ -82,21 +67,6 @@
 					<div class="ui radio checkbox">
 						<input type="radio" name="3AB" tabindex="0" class="hidden" value="戲劇 Drama">
 						<label>戲劇 Drama</label>
-					</div>
-				</div>
-			</div>
-			<div class="grouped fields">
-				<label for="4AB">授課時段：4AB</label>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input type="radio" name="4AB" checked="" tabindex="0" class="hidden" value="程式語言入門 Python Guide">
-						<label>程式語言入門 Python Guide</label>
-					</div>
-				</div>
-				<div class="field">
-					<div class="ui radio checkbox">
-						<input type="radio" name="4AB" tabindex="0" class="hidden" value="熱門音樂基礎 Popular Music Fundamentals">
-						<label>熱門音樂基礎 Popular Music Fundamentals</label>
 					</div>
 				</div>
 			</div>

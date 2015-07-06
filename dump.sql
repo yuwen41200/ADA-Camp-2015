@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- 主機: dbhome.cs.nctu.edu.tw
--- 產生時間： 2015 年 07 月 06 日 15:58
+-- 產生時間： 2015 年 07 月 07 日 02:14
 -- 伺服器版本: 5.6.24-log
--- PHP 版本： 5.6.9
+-- PHP 版本： 5.3.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -31,11 +31,9 @@ USE `ywpu_cs`;
 CREATE TABLE IF NOT EXISTS `ada2015_course` (
 `id` int(11) NOT NULL,
   `sid` int(11) NOT NULL,
-  `1B` varchar(50) NOT NULL,
   `2AB` varchar(50) NOT NULL,
   `2CD` varchar(50) NOT NULL,
   `3AB` varchar(50) NOT NULL,
-  `4AB` varchar(50) NOT NULL,
   `4CD` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 

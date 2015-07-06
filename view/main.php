@@ -110,26 +110,17 @@
 								在現代多種通訊軟體充斥的年代，<br>
 								將帶領學弟妹深入了解 BBS 勝於其他平台的原因。</div>
 							</div>
-							<div class="item">網頁前端 Front-end Development<br>
-							侯舜元、許承佑 / 1CD / 實作、電子講義
-								<div class="right floated">指導學生撰寫個人網頁，<br>
-								藉此熟悉語法，<br>
-								建立基本架構與套用版型設計。</div>
-							</div>
-						</div>
-						<div class="ui section divider"></div>
-						<h3 class="ui header">選修課程</h3>
-						<div class="ui animated selection list">
-							<div class="item">文字編輯器 Editors<br>
-							許承佑 / 1B / 實作、電子講義
-								<div class="right floated">編輯器是軟體工程師不可或缺的工具之一，<br>
-								本課程將介紹一個伴隨工作的好夥伴。</div>
-							</div>
 							<div class="item">專案管理 Project Management<br>
 							林家瑜 / 1B / 投影片
 								<div class="right floated">讓大家試著思考當你要舉辦一場活動時，<br>
 								應該從何開始！<br>
 								以及如何用更有效率的方式做事情！</div>
+							</div>
+							<div class="item">網頁前端 Front-end Development<br>
+							侯舜元、許承佑 / 1CD4A / 實作、電子講義
+								<div class="right floated">指導學生撰寫個人網頁，<br>
+								藉此熟悉語法，<br>
+								建立基本架構與套用版型設計。</div>
 							</div>
 						</div>
 					</div>
@@ -188,18 +179,22 @@
 						</div>
 					</div>
 					<div class="ui bottom attached tab segment" data-tab="day_four">
-						<h3 class="ui header">選修課程</h3>
+						<h3 class="ui header">必修課程</h3>
 						<div class="ui animated selection list">
-							<div class="item">程式語言入門 Python Guide<br>
-							林家瑜、許承佑 / 4AB / 實作、電子講義
-								<div class="right floated">講師將藉由自身經歷，<br>
-								闡述自學的藝術，<br>
-								引導學生從各方尋找學習資源。</div>
+							<div class="item">網頁前端 Front-end Development<br>
+							侯舜元、許承佑 / 1CD4A / 實作、電子講義
+								<div class="right floated">指導學生撰寫個人網頁，<br>
+								藉此熟悉語法，<br>
+								建立基本架構與套用版型設計。</div>
 							</div>
 							<div class="item">熱門音樂基礎 Popular Music Fundamentals<br>
-							蒲郁文 / 4AB / 投影片、影片、Guitar Pro 6
+							蒲郁文 / 4B / 投影片、影片、Guitar Pro 6
 								<div class="right floated">帶你掌握基本的熱門音樂元素與概念。</div>
 							</div>
+						</div>
+						<div class="ui section divider"></div>
+						<h3 class="ui header">選修課程</h3>
+						<div class="ui animated selection list">
 							<div class="item">影片剪輯觀念 Film Editing Concepts<br>
 							薛暐薺 / 4CD / 實作
 								<div class="right floated">擺脫轉場特效，<br>

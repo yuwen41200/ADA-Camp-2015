@@ -16,7 +16,7 @@ class EnrollModel extends Model {
 
 	public function insertRow($table, $params) {
 		$table_name = $this -> table($table);
-		$column = '1B, 2AB, 2CD, 3AB, 4AB, 4CD, sid';
+		$column = '2AB, 2CD, 3AB, 4CD, sid';
 		unset($params['key']);
 		$params['sid'] = $this -> sid;
 		$value = $this -> db -> checkValues($params);
