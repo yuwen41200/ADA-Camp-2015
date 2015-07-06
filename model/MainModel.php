@@ -3,15 +3,15 @@
 class MainModel extends Model {
 
 	private $hash_value = NULL;
-	private $enroll_str = NULL;
+	private $apply_str = NULL;
 
 	public function insertRow($table, $params) {
 		$table_name = $this -> table($table);
-		$column = 'name, club, year, birth, phone, idnum, email, food, enroll, note, idkey';
-		if (empty($params['enroll']))
+		$column = 'name, club, year, birth, phone, idnum, email, food, apply, note, idkey';
+		if (empty($params['apply']))
 			die('你什麼活動都不參加，那你填報名表幹嘛？');
-		$this -> enroll_str = implode('；', $params['enroll']);
-		$params['enroll'] = $this -> enroll_str;
+		$this -> apply_str = implode('；', $params['apply']);
+		$params['apply'] = $this -> apply_str;
 		$this -> hash_value = password_hash($params['name'], PASSWORD_DEFAULT);
 		$params['idkey'] = $this -> hash_value;
 		$value = $this -> db -> checkValues($params);
@@ -24,7 +24,7 @@ class MainModel extends Model {
 			die('電子郵件信箱無效');
 		foreach ($params as $key => $value)
 			$params[$key] = htmlentities((string) $params[$key], ENT_QUOTES, 'UTF-8');
-		$this -> enroll_str = htmlentities($this -> enroll_str, ENT_QUOTES, 'UTF-8');
+		$this -> apply_str = htmlentities($this -> apply_str, ENT_QUOTES, 'UTF-8');
 		$this -> hash_value = htmlentities($this -> hash_value, ENT_QUOTES, 'UTF-8');
 		$to = $params['email'];
 		$subject = '=?UTF-8?B?'.base64_encode('ADA 2015 報名通知信').'?=';
@@ -57,7 +57,7 @@ class MainModel extends Model {
 		<tr><td>身份證字號</td><td>$params[idnum]</td></tr>\r\n
 		<tr><td>電子郵件信箱</td><td>$params[email]</td></tr>\r\n
 		<tr><td>飲食</td><td>$params[food]</td></tr>\r\n
-		<tr><td>報名項目</td><td>$this->enroll_str</td></tr>\r\n
+		<tr><td>報名項目</td><td>$this->apply_str</td></tr>\r\n
 		<tr><td>備註</td><td>$params[note]</td></tr>\r\n
 	</table>\r\n
 	<p>你的選課金鑰為：<span style='color: red'>$this->hash_value</span><br>\r\n

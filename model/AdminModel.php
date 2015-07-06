@@ -15,7 +15,7 @@ class AdminModel extends Model {
 		$output .= "<td>idnum</td>";
 		$output .= "<td>email</td>";
 		$output .= "<td>food</td>";
-		$output .= "<td>enroll</td>";
+		$output .= "<td>apply</td>";
 		$output .= "<td>note</td>";
 		$output .= "<td>paid</td>";
 		$output .= "<td>idkey</td>";
@@ -30,7 +30,7 @@ class AdminModel extends Model {
 			$output .= "<td>$row[idnum]</td>";
 			$output .= "<td>$row[email]</td>";
 			$output .= "<td>$row[food]</td>";
-			$output .= "<td>$row[enroll]</td>";
+			$output .= "<td>$row[apply]</td>";
 			$output .= "<td>$row[note]</td>";
 			$output .= "<td>$row[paid]</td>";
 			$output .= "<td>$row[idkey]</td>";

@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- 主機: dbhome.cs.nctu.edu.tw
--- 產生時間： 2015 年 07 月 06 日 03:26
+-- 產生時間： 2015 年 07 月 06 日 15:58
 -- 伺服器版本: 5.6.24-log
--- PHP 版本： 5.3.29
+-- PHP 版本： 5.6.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `ada2015_course` (
   `3AB` varchar(50) NOT NULL,
   `4AB` varchar(50) NOT NULL,
   `4CD` varchar(50) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -55,24 +55,12 @@ CREATE TABLE IF NOT EXISTS `ada2015_student` (
   `idnum` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `food` varchar(50) NOT NULL,
-  `enroll` varchar(50) NOT NULL,
+  `apply` varchar(50) NOT NULL,
   `note` varchar(255) DEFAULT NULL,
   `paid` tinyint(1) NOT NULL DEFAULT '0',
   `idkey` varchar(255) NOT NULL,
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- 資料表結構 `web_framework_test`
---
-
-CREATE TABLE IF NOT EXISTS `web_framework_test` (
-`id` int(20) NOT NULL,
-  `content` varchar(255) NOT NULL,
-  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- 已匯出資料表的索引
@@ -91,12 +79,6 @@ ALTER TABLE `ada2015_student`
  ADD PRIMARY KEY (`id`);
 
 --
--- 資料表索引 `web_framework_test`
---
-ALTER TABLE `web_framework_test`
- ADD PRIMARY KEY (`id`);
-
---
 -- 在匯出的資料表使用 AUTO_INCREMENT
 --
 
@@ -104,17 +86,12 @@ ALTER TABLE `web_framework_test`
 -- 使用資料表 AUTO_INCREMENT `ada2015_course`
 --
 ALTER TABLE `ada2015_course`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- 使用資料表 AUTO_INCREMENT `ada2015_student`
 --
 ALTER TABLE `ada2015_student`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
---
--- 使用資料表 AUTO_INCREMENT `web_framework_test`
---
-ALTER TABLE `web_framework_test`
-MODIFY `id` int(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=35;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- 已匯出資料表的限制(Constraint)
 --

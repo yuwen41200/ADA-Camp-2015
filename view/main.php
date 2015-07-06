@@ -332,15 +332,15 @@
 						<div class="field">
 							<div class="ui label">報名項目</div>
 							<div class="ui checkbox">
-								<input name="enroll[]" type="checkbox" value="學術課程" checked="checked">
+								<input name="apply[]" type="checkbox" value="學術課程" checked="checked">
 								<label>學術課程</label>
 							</div>
 							<div class="ui checkbox">
-								<input name="enroll[]" type="checkbox" value="活動課程">
+								<input name="apply[]" type="checkbox" value="活動課程">
 								<label>活動課程</label>
 							</div>
 							<div class="ui checkbox">
-								<input name="enroll[]" type="checkbox" value="加購紀念 T 恤">
+								<input name="apply[]" type="checkbox" value="加購紀念 T 恤">
 								<label>加購紀念 T 恤</label>
 							</div>
 							<div class="ui green label">費用總計：NT$ 500</div>
