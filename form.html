@@ -5,22 +5,22 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<title>ADA 2015 選課囉！</title>
-	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.0/semantic.min.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo $web_root; ?>/view/style/form.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.0/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="style/form.css">
 	<script>
 		/* jshint ignore:start */
-		var applicationStatusCode = <?php echo $application_status_code; ?>;
-		var applicationStatusMessage = <?php echo $application_status_message; ?>;
+		var applicationStatusCode = 0;
+		var applicationStatusMessage = "";
 		/* jshint ignore:end */
 	</script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.0/semantic.min.js"></script>
-	<script src="<?php echo $web_root; ?>/view/script/form.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.0/semantic.min.js"></script>
+	<script src="script/form.js"></script>
 </head>
 <body>
 	<div class="ui info message">
 		<div class="header">每個時段請選擇一門專業課程或一門通識課程。</div>
-		<form class="ui form" name="sendForm" action="<?php echo $web_root; ?>/index/ctl/enroll/act/submitFormAction" method="post">
+		<form class="ui form" name="sendForm" action="#" method="post">
 			<div class="field">
 				<label for="key">請輸入您的選課金鑰</label>
 				<input type="text" name="key">
